@@ -22,6 +22,9 @@ h1 {
     width: 500px;
     height: 130px;
 }
+.container {
+    border: 4px solid black;
+}
 
 footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
