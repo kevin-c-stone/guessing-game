@@ -1,10 +1,10 @@
 "use strict";
 
-// prompt to greet the user
-let theirName = prompt('What is your name?');
+// // prompt to greet the user
+// let theirName = prompt('What is your name?');
 
-// console.log('Their name is: ' + theirName);
-alert(theirName + ', welcome! That might be the coolest name out there. My name is Kevin Stone and welcome to my site!');
+// // console.log('Their name is: ' + theirName);
+// alert(theirName + ', welcome! That might be the coolest name out there. My name is Kevin Stone and welcome to my site!');
 
 function firstFunction() {
 

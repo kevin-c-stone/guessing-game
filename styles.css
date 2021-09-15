@@ -1,0 +1,29 @@
+
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: cornsilk;
+    background-color: rgb(57, 65, 46);
+    border: 4px solid black;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+}
+
+#headerDiv {
+    font-family: Tahoma, sans-serif;
+    font-size: larger;
+    color: cornsilk;
+    border: 4px solid rgb(145, 31, 31);
+    background-color: rgb(50, 56, 40);
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    height: 130px;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
