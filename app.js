@@ -97,7 +97,7 @@ function firstFunction() {
   alert('Thank you ' + theirName + ', for playing this guessing game. Hopefully you learned something about Kevin along the way.');
 }
 
-  // 6. prompt to guess a number
+  // 6. random number generator
   function randomNumberGenerator(){
     // Got the folowing code from W3 Schools
     // https://www.w3schools.com/js/js_random.asp
@@ -105,10 +105,10 @@ function firstFunction() {
     return correctAnswer;
 };
 
-
+  // 6. Number guessing game
 function userGuessingGame(correctAnswer){
   console.log(correctAnswer)
-  let wannaPlay = prompt('Do you want to play a game? (yes or no)');
+  let wannaPlay = prompt('Are you sure you want to play this rad game? (yes or no)');
   outLoop: while (wannaPlay.toLowerCase() == 'yes') {
       let numberOfAttempts = 4;
       let userAnswer = parseInt(prompt('Guess a number between 1 and 100'));
@@ -130,7 +130,19 @@ function userGuessingGame(correctAnswer){
           userAnswer = parseInt(prompt('Guess a number between 1 and 100'))
           console.log(userAnswer);
         }
-        alert('Nice Try!');
+        alert('Nice Try! The answer was ' + correctAnswer + '.');
         break;
       }
+  }
+
+  
+
+  const correctPark = 
+  ['Sequoia', 'Glacier', 'Great Smoky Mountains', 
+  'Yellowstone', 'Olympic', 'Grand Canyon', 'Arches', 
+  'Yosemite', 'Everglades', 'Shenandoah'];
+
+  function nationalParks() {
+    let wantToPlay = prompt('Are you sure you want to play? (yes or no)');
+    
   }
