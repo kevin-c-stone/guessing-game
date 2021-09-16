@@ -9,3 +9,9 @@ This site is a guessing game site about myself and my interests, plus a generic 
 I hope you enjoy learning some useless knowledge about myself and my interests.
 
 
+# Partners
+Driver: Brandon Wolf
+Navigator: Kevin Stone
+Observer: Kyrillos Khalil
+
+Update the buttons function to clickable. All games encapsulated in a function.
