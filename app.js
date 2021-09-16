@@ -14,8 +14,6 @@ function buttons () {
         userGuessingGame(randomNumberGenerator());
     } else if (game == 3) {
         nationalParks();
-    } else if (game == 4) {
-        "" 
     }
 }
 
@@ -135,14 +133,41 @@ function userGuessingGame(correctAnswer){
       }
   }
 
+
+
+// multiple choice
+
+function nationalParks () {
+let totalCorrect = [];
+
+let numberofGuesses = 6;
+let correct = false;
+let myNationalParks = ['sequoia', 'glacier', 'great smoky mountains', 
+'yellowstone', 'olympic', 'grand canyon', 'arches', 
+'yosemite', 'everglades', 'shenandoah'];
+
+  while(numberofGuesses > 0 && correct == false) {
+
+    let userGuess = prompt('Can you guess my favorite national parks?');
   
-
-  const correctPark = 
-  ['Sequoia', 'Glacier', 'Great Smoky Mountains', 
-  'Yellowstone', 'Olympic', 'Grand Canyon', 'Arches', 
-  'Yosemite', 'Everglades', 'Shenandoah'];
-
-  function nationalParks() {
-    let wantToPlay = prompt('Are you sure you want to play? (yes or no)');
-    
+      for (let i = 0; i < myNationalParks.length; i++) {
+        if (userGuess.toLowerCase() == myNationalParks[i].toLowerCase()) {
+          alert('that is correct');
+          totalCorrect++;
+          correct = true;
+          break;
+        }
+      }
+      
+      if (!correct) {    
+      numberofGuesses--;
+      alert('you wrong')
+      }
   }
+
+  if (!correct) {
+    alert('you ran out of guesses');
+  } else {
+    alert('You got ' + userGuess + ' correct');
+  }
+}
