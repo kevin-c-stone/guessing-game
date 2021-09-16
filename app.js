@@ -6,6 +6,19 @@ let theirName = prompt('What is your name?');
 // console.log('Their name is: ' + theirName);
 alert(theirName + ', welcome! That might be the coolest name out there. My name is Kevin Stone and welcome to my site!');
 
+function buttons () {
+    let game = prompt('Which guessing game do you wnat to play? Select a number (1. Kevin 2. Number 3. National Parks)')
+    if (game == 1) {
+        firstFunction();
+    } else if (game == 2){
+        userGuessingGame(randomNumberGenerator());
+    } else if (game == 3) {
+        nationalParks();
+    } else if (game == 4) {
+        "" 
+    }
+}
+
 function firstFunction() {
 
 
@@ -83,3 +96,41 @@ function firstFunction() {
   // final message to user
   alert('Thank you ' + theirName + ', for playing this guessing game. Hopefully you learned something about Kevin along the way.');
 }
+
+  // 6. prompt to guess a number
+  function randomNumberGenerator(){
+    // Got the folowing code from W3 Schools
+    // https://www.w3schools.com/js/js_random.asp
+    let correctAnswer = Math.floor(Math.random() * 100) +1;
+    return correctAnswer;
+};
+
+
+function userGuessingGame(correctAnswer){
+  console.log(correctAnswer)
+  let wannaPlay = prompt('Do you want to play a game? (yes or no)');
+  outLoop: while (wannaPlay.toLowerCase() == 'yes') {
+      let numberOfAttempts = 4;
+      let userAnswer = parseInt(prompt('Guess a number between 1 and 100'));
+
+      while (userAnswer >= 1 && userAnswer <= 100 && numberOfAttempts) {
+          if (userAnswer === correctAnswer) {
+              alert('Well done! You got it right.');
+              break outLoop;
+          }
+          if (userAnswer < correctAnswer) {
+              alert('Your answer is too low, try again! You have ' + numberOfAttempts + ' attempts left.')
+              console.log('LOW');
+          }
+          if (userAnswer > correctAnswer) {
+            alert('Your answer is too high, try again! You have ' + numberOfAttempts + ' attempts left.')
+            console.log('HIGH');
+          }
+          numberOfAttempts -= 1;
+          userAnswer = parseInt(prompt('Guess a number between 1 and 100'))
+          console.log(userAnswer);
+        }
+        alert('Nice Try!');
+        break;
+      }
+  }
