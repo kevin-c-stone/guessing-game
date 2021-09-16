@@ -14,4 +14,4 @@ Driver: Brandon Wolf
 Navigator: Kevin Stone
 Observer: Kyrillos Khalil
 
-Update the buttons function to clickable. All games encapsulated in a function.
+Updated the buttons function to clickable. All games encapsulated in a function.
