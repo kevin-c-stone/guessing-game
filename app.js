@@ -148,11 +148,11 @@ let myNationalParks = ['sequoia', 'glacier', 'great smoky mountains',
 
   while(numberofGuesses > 0 && correct == false) {
 
-    let userGuess = prompt('Can you guess my favorite national parks?');
+    let userGuess = prompt('Can you guess one of my favorite national parks?');
   
       for (let i = 0; i < myNationalParks.length; i++) {
         if (userGuess.toLowerCase() == myNationalParks[i].toLowerCase()) {
-          alert('that is correct');
+          alert('Well done, that is correct!');
           totalCorrect++;
           correct = true;
           break;
@@ -161,13 +161,13 @@ let myNationalParks = ['sequoia', 'glacier', 'great smoky mountains',
       
       if (!correct) {    
       numberofGuesses--;
-      alert('you wrong')
+      alert('WRONG! Try again.')
       }
   }
 
   if (!correct) {
     alert('you ran out of guesses');
   } else {
-    alert('You got ' + userGuess + ' correct');
+    alert('You got correct ' + theirName + ', great job!');
   }
 }
