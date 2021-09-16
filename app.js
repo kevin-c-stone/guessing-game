@@ -6,15 +6,15 @@ let theirName = prompt('What is your name?');
 // console.log('Their name is: ' + theirName);
 alert(theirName + ', welcome! That might be the coolest name out there. My name is Kevin Stone and welcome to my site!');
 
-function buttons () {
-    let game = prompt('Which guessing game do you wnat to play? Select a number (1. Kevin 2. Number 3. National Parks)')
-    if (game == 1) {
-        firstFunction();
-    } else if (game == 2){
-        userGuessingGame(randomNumberGenerator());
-    } else if (game == 3) {
-        nationalParks();
-    }
+function clickables() {
+  let game = prompt('Which guessing game do you wnat to play? Select a number (1. Kevin 2. Number 3. National Parks)')
+  if (game == 1) {
+    firstFunction();
+  } else if (game == 2) {
+    userGuessingGame(randomNumberGenerator());
+  } else if (game == 3) {
+    nationalParks();
+  }
 }
 
 function firstFunction() {
@@ -95,74 +95,74 @@ function firstFunction() {
   alert('Thank you ' + theirName + ', for playing this guessing game. Hopefully you learned something about Kevin along the way.');
 }
 
-  // 6. random number generator
-  function randomNumberGenerator(){
-    // Got the folowing code from W3 Schools
-    // https://www.w3schools.com/js/js_random.asp
-    let correctAnswer = Math.floor(Math.random() * 100) +1;
-    return correctAnswer;
+// 6. random number generator
+function randomNumberGenerator() {
+  // Got the folowing code from W3 Schools
+  // https://www.w3schools.com/js/js_random.asp
+  let correctAnswer = Math.floor(Math.random() * 100) + 1;
+  return correctAnswer;
 };
 
-  // 6. Number guessing game
-function userGuessingGame(correctAnswer){
+// 6. Number guessing game
+function userGuessingGame(correctAnswer) {
   console.log(correctAnswer)
   let wannaPlay = prompt('Are you sure you want to play this rad game? (yes or no)');
   outLoop: while (wannaPlay.toLowerCase() == 'yes') {
-      let numberOfAttempts = 4;
-      let userAnswer = parseInt(prompt('Guess a number between 1 and 100'));
+    let numberOfAttempts = 4;
+    let userAnswer = parseInt(prompt('Guess a number between 1 and 100'));
 
-      while (userAnswer >= 1 && userAnswer <= 100 && numberOfAttempts) {
-          if (userAnswer === correctAnswer) {
-              alert('Well done! You got it right.');
-              break outLoop;
-          }
-          if (userAnswer < correctAnswer) {
-              alert('Your answer is too low, try again! You have ' + numberOfAttempts + ' attempts left.')
-              console.log('LOW');
-          }
-          if (userAnswer > correctAnswer) {
-            alert('Your answer is too high, try again! You have ' + numberOfAttempts + ' attempts left.')
-            console.log('HIGH');
-          }
-          numberOfAttempts -= 1;
-          userAnswer = parseInt(prompt('Guess a number between 1 and 100'))
-          console.log(userAnswer);
-        }
-        alert('Nice Try! The answer was ' + correctAnswer + '.');
-        break;
+    while (userAnswer >= 1 && userAnswer <= 100 && numberOfAttempts) {
+      if (userAnswer === correctAnswer) {
+        alert('Well done! You got it right.');
+        break outLoop;
       }
+      if (userAnswer < correctAnswer) {
+        alert('Your answer is too low, try again! You have ' + numberOfAttempts + ' attempts left.')
+        console.log('LOW');
+      }
+      if (userAnswer > correctAnswer) {
+        alert('Your answer is too high, try again! You have ' + numberOfAttempts + ' attempts left.')
+        console.log('HIGH');
+      }
+      numberOfAttempts -= 1;
+      userAnswer = parseInt(prompt('Guess a number between 1 and 100'))
+      console.log(userAnswer);
+    }
+    alert('Nice Try! The answer was ' + correctAnswer + '.');
+    break;
   }
+}
 
 
 
 // multiple choice
 
-function nationalParks () {
-let totalCorrect = [];
+function nationalParks() {
+  let totalCorrect = [];
 
-let numberofGuesses = 6;
-let correct = false;
-let myNationalParks = ['sequoia', 'glacier', 'great smoky mountains', 
-'yellowstone', 'olympic', 'grand canyon', 'arches', 
-'yosemite', 'everglades', 'shenandoah'];
+  let numberofGuesses = 6;
+  let correct = false;
+  let myNationalParks = ['sequoia', 'glacier', 'great smoky mountains',
+    'yellowstone', 'olympic', 'grand canyon', 'arches',
+    'yosemite', 'everglades', 'shenandoah'];
 
-  while(numberofGuesses > 0 && correct == false) {
+  while (numberofGuesses > 0 && correct == false) {
 
     let userGuess = prompt('Can you guess one of my favorite national parks?');
-  
-      for (let i = 0; i < myNationalParks.length; i++) {
-        if (userGuess.toLowerCase() == myNationalParks[i].toLowerCase()) {
-          alert('Well done, that is correct!');
-          totalCorrect++;
-          correct = true;
-          break;
-        }
+
+    for (let i = 0; i < myNationalParks.length; i++) {
+      if (userGuess.toLowerCase() == myNationalParks[i].toLowerCase()) {
+        alert('Well done, that is correct!');
+        totalCorrect++;
+        correct = true;
+        break;
       }
-      
-      if (!correct) {    
+    }
+
+    if (!correct) {
       numberofGuesses--;
       alert('WRONG! Try again.')
-      }
+    }
   }
 
   if (!correct) {
